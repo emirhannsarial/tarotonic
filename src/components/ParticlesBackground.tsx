@@ -1,10 +1,6 @@
-// src/components/ParticlesBackground.tsx
 import React, { useCallback } from "react";
-// React sarmalayıcı
 import Particles from "react-tsparticles";
-// Motoru buradan çekiyoruz
 import { loadFull } from "tsparticles";
-// JSON’u any olarak alıyoruz
 import config from "../particles-config.json";
 
 const ParticlesBackground: React.FC = () => {
@@ -16,7 +12,7 @@ const ParticlesBackground: React.FC = () => {
     <Particles
       id="tsparticles"
       init={particlesInit}
-      options={config as any}    // <-- tipi bypass ediyoruz
+      options={config as any}    
       style={{
         position: "absolute",
         top: 0,

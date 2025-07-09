@@ -3,7 +3,6 @@ import ParticlesBackground from './components/ParticlesBackground';
 function App() {
     return (
         <div className="relative min-h-screen bg-gradient-to-r from-[#140925] to-[#371B58] overflow-hidden">
-            {/* 🌟 Particles sadece bu sayfaya özel */}
             <ParticlesBackground />
             <section
                 className="pt-8 lg:pt-32"
