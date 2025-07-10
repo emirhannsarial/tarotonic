@@ -53,7 +53,7 @@ export default function Header() {
             <button
               onClick={() => setMenuOpen((o) => !o)}
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all"
               aria-controls="mobile-menu"
               aria-expanded={menuOpen}
             >
@@ -94,55 +94,56 @@ export default function Header() {
           </div>
 
           {/* Menü öğeleri */}
-          <div
-            className={`${
-              menuOpen ? "block" : "hidden"
-            } w-full lg:flex lg:w-auto lg:order-1`}
-            id="mobile-menu"
-          >
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <li>
-                <a
-                  href="/"
-                  className="block py-2 pr-4 pl-3 rounded text-white hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:p-0 transition-all"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:p-0 transition-all"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/read"
-                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:p-0 transition-all"
-                >
-                  Reading
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/tarot-cards"
-                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:p-0 transition-all"
-                >
-                  Tarot Cards
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/blog"
-                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:p-0 transition-all"
-                >
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
+<div
+  className={`${
+    menuOpen ? "block" : "hidden"
+  } w-full lg:flex lg:w-auto lg:order-1`}
+  id="mobile-menu"
+>
+  <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 items-center">
+    <li className="w-full lg:w-auto">
+      <a
+        href="/"
+        className="w-full text-left block py-2 px-4 rounded text-white hover:bg-transparent lg:hover:text-primary-700 transition-all"
+      >
+        Home
+      </a>
+    </li>
+    <li className="w-full lg:w-auto">
+      <a
+        href="/about"
+        className="w-full text-left block py-2 px-4 rounded text-white hover:bg-transparent lg:hover:text-primary-700 transition-all"
+      >
+        About
+      </a>
+    </li>
+    <li className="w-full lg:w-auto">
+      <a
+        href="/read"
+        className="w-full text-left block py-2 px-4 rounded text-white hover:bg-transparent lg:hover:text-primary-700 transition-all"
+      >
+        Reading
+      </a>
+    </li>
+    <li className="w-full lg:w-auto">
+      <a
+        href="/tarot-cards"
+        className="w-full text-left block py-2 px-4 rounded text-white hover:bg-transparent lg:hover:text-primary-700 transition-all"
+      >
+        Tarot Cards
+      </a>
+    </li>
+    <li className="w-full lg:w-auto">
+      <a
+        href="/blog"
+        className="w-full text-left block py-2 px-4 rounded text-white hover:bg-transparent lg:hover:text-primary-700 transition-all"
+      >
+        Blog
+      </a>
+    </li>
+  </ul>
+</div>
+
 
         </div>
       </nav>
